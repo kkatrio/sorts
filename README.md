@@ -1,1 +1,1 @@
-Sorting algorithms in Rust.
+Sorting algorithms in Rust, just for practice.
