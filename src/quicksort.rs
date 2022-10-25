@@ -19,18 +19,16 @@ where
     while left <= right {
         if rest[left] < *pivot {
             left += 1;
-            println!("advanced left to: {}", left);
         } else if rest[right] > *pivot {
             if right == 0 {
                 break;
             }
             right -= 1;
-            println!("reduced right to: {}", right);
         } else {
-            println!("left: {}", left);
-            println!("right: {}", right);
+            //println!("left: {}", left);
+            //println!("right: {}", right);
             rest.swap(left, right);
-            println!("after SWAP: {:?}", rest);
+            //println!("after SWAP: {:?}", rest);
             left += 1;
             if right == 0 {
                 break;
@@ -41,7 +39,7 @@ where
     // place the pivot between the two sub-slices
     left = left + 1;
     slice.swap(0, left - 1);
-    println!("slice after placing the pivot: {:?}", slice);
+    //println!("slice after placing the pivot: {:?}", slice);
 
     let (left, right) = slice.split_at_mut(left);
     quicksort(left);
